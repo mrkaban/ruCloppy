@@ -1,0 +1,68 @@
+object Form1: TForm1
+  Left = 276
+  Height = 262
+  Top = 110
+  Width = 449
+  Caption = 'ruCloppy - v0.3'
+  ClientHeight = 262
+  ClientWidth = 449
+  OnCreate = FormCreate
+  LCLVersion = '2.0.2.0'
+  object ClipListBox: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ClearButton
+    Left = 2
+    Height = 185
+    Top = 2
+    Width = 445
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 2
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 2
+    BorderSpacing.Bottom = 25
+    ItemHeight = 0
+    OnDblClick = ClipListBoxDblClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ClearButton: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 187
+    Height = 25
+    Top = 212
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 25
+    Caption = 'Очистить'
+    OnClick = ClearButtonClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object GitHubLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 2
+    Height = 15
+    Top = 247
+    Width = 127
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 2
+    Caption = 'КонтинентСвободы.рф'
+    ParentColor = False
+    ParentFont = False
+    OnClick = GitHubLabelClick
+  end
+  object CloppyTimer: TTimer
+    Interval = 200
+    OnTimer = CloppyTimerTimer
+    left = 60
+    top = 40
+  end
+end
